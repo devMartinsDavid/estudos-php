@@ -1,0 +1,237 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    background-color: #069;
+    padding: 8px 10px;
+    text-align: center;
+}
+
+/* Links */
+a {
+    display: inline-block;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Section */
+section {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 2%;
+}
+
+/* Headings and Paragraphs */
+h2 {
+    background-color: rgb(29, 157, 222);
+    color: white;
+    padding: 8px 10px;
+}
+
+p {
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Images */
+img {
+    width: 50%;
+    height: 50%;
+}
+
+.img-sobre {
+    width: 100%;
+}
+
+/* Home Container */
+#container-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sobre Container */
+#container-sobre {
+    display: row;
+}
+
+#container-sobre .texto_sobre_container {
+    display: flex;
+    justify-content: center;
+    columns: 6;
+}
+#container-sobre .container_sobre_conteudo{
+    columns: 2;
+}
+
+/* Texts */
+#texto_contato,
+#texto_home,
+#texto_sobre,
+#texto_loja {
+    font-size: xx-large;
+}
+
+#texto_contato {
+    color: aliceblue;
+}
+
+/* Contato Container */
+#container_contato {
+    background-image: url('./image/triangle.png');
+    background-repeat: no-repeat;
+    background-size: 100vh;
+    background-position: center;
+    height: 500px;
+}
+
+#container_contato .texto_container_contato {
+    display: flex;
+    justify-content: center;
+}
+
+#container_contato .container_contato_conteudo {
+    display: flex;
+    margin-left: 25%;
+    justify-content: center;
+    flex-direction: column;
+    height: 50%;
+    width: 50%;
+}
+
+#container_contato .container_contato_conteudo h3 {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+
+#container_contato .container_contato_conteudo input {
+    margin-left: 10%;
+    font-size: medium;
+}
+
+#container_contato .container_contato_conteudo input:focus {
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+#container_contato .container_label {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.buttom {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    color: aliceblue;
+    background-color: #069;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttom:hover {
+    background-color: rgb(5, 153, 228);
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Media Query */
+@media (max-width: 599px) {
+    .products-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Texto Loja Container */
+.container_texto_loja {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Products Container */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Produto */
+.Produto {
+    position: relative;
+    flex: 0 0 40%;
+    margin: 10px;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease-in-out;
+}
+
+.Produto img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Descrição */
+.descricao {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 0, 0.8);
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.Produto:hover {
+    transform: scale(1.1);
+}
+
+.Produto:hover .descricao {
+    opacity: 1;
+}
+
+/* Labels and Form */
+label {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: aliceblue;
+}
+
+form {
+    font-size: large;
+    height: 100%;
+    margin-top: 50px;
+}
+
+form p {
+    font-size: large;
+    color: aliceblue;
+}
+
+form a {
+    background-color: #069;
+    cursor: pointer;
+}
+
+form a:hover {
+    background-color: rgb(5, 153, 228);
+}
